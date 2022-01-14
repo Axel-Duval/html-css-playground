@@ -1,0 +1,63 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.wrapper {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 150px auto;
+    grid-template-rows: 50px auto;
+    grid-template-areas:
+        "nav nav"
+        "aside main"
+}
+
+nav {
+    grid-area: nav;
+    position: relative;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding:0;
+}
+
+main {
+    grid-area: main;
+    margin: 10px;
+    border-radius: 7px;
+    overflow: auto;
+}
+
+nav > img {
+    position: absolute;
+    top: 8px;
+    left: 10px;
+    height: 34px;
+    color: rgb(223, 35, 35);
+}
+
+nav > ul {
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+nav > ul > li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+aside {
+    grid-area: aside;
+    display: flex;
+    flex-direction: column;
+}
+aside > ul {
+    flex: 1 1 0;
+    overflow: auto;
+}
